@@ -6,4 +6,4 @@
 
 #### Image:
 
-<img src="./joseimg2.jpg" width="300">
+<img src="./joseimg3.jpg" width="300">
