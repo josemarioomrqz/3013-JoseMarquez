@@ -126,4 +126,3 @@ int main() {
     tree.saveDotFile("bst_snapshot.dot");
 }
 
-// dot -Tpng graph.dot -o graph.png
