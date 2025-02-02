@@ -84,6 +84,12 @@ class Bst {
                 _insert(subroot->right, x);
             }
         }
+    Node* _delete(Node* subroot, int key){
+        if (!subroot)
+        return nullptr;
+
+        if 
+    }
     }
 
 public:
