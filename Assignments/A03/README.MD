@@ -56,4 +56,4 @@ Implementing `deleteNode()` posed **several challenges**:
 
 
 ##  Conclusion
-Our BST delete function is **optimized, iterative, and handles all edge cases** efficiently. It maintains BST properties while properly updating node relationships, ensuring correctness across different tree structures.
+My BST delete function is **optimized, iterative, and handles all edge cases** efficiently. It maintains BST properties while properly updating node relationships, ensuring correctness across different tree structures.
