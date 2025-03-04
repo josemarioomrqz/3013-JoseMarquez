@@ -1,5 +1,5 @@
 ## Jose Marquez
-## Repo: 3013 - Discrete Structures
+## Repo: 3013 - Advance Structures
 
 ## Assignment 03 - Binary Search Tree (Delete Method)
 
