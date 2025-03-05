@@ -84,6 +84,6 @@
 | **Final AVL Tree** |
 | :---: |
 |<img src="./09.png" width="600">|
-| **Balanced after all insertions and rotatios |
+| **Balanced after all insertions and rotations** |
 
 
