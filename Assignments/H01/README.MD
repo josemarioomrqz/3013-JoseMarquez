@@ -1,10 +1,10 @@
 ## Jose Marquez
-## Repo: 3013 - Advance Structures
+## Repo: 3013 - Advanced Structures
 
 ## Assignment 05 - AVL tree (Insertions with Multiple Rotations)
 
 
-## Left - Right and Right Lef Rotations
+## Left - Right and Right - Left Rotations
 
 **Set : 10, 20, 30, 15, 25, 5, 35, 27**
 
@@ -26,7 +26,7 @@
 | BF (30) = 0 |
 | BF (20) = -1 |
 | BF (10) = 0 - 2 = -2  
-| **Imbalance (Right-Right at 10)** |
+| **Imbalance at Node 10 (Right-Right case)** |
 
 
 | **Rotation RR (Right-Right) at 10** |
@@ -87,3 +87,8 @@
 | **Balanced after all insertions and rotations** |
 
 
+### **Summary**
+ - The AVL tree was **successfully balanced** after multiple insertions.
+- A **Right-Right (RR) Rotation** was performed at **Node 10**.
+- No additional rotations were needed after the **Insert 27** step.
+- The final tree has a **maximum balance factor of -1, 0, or 1** confirming that it is AVL-balanced.
