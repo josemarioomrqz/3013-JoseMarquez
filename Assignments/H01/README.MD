@@ -8,19 +8,20 @@
 
 **Set : 10, 20, 30, 15, 25, 5, 35, 27**
 
-**Insert 10 (Img01)**
-<img src="./01.png" width="300">
+| **Insert 10 (Img01)** |
+|:---:|
+|<img src="./01.png" width="100">|
+| BF(10) = 0 (Balanced) |
 
-- BF(10) = 0 (Balanced)
 
-
-**Insert 20 (Img02)**
-<img src="./Img02.png" width="300">
-
-- BF (20) = 0 - 1 = -1 (Balanced)
+| **Insert 20 (Img02)** |
+| :-----:|
+|<img src="./Img02.png" width="300">|
+| BF (20) = 0 - 1 = -1 (Balanced) |
 
 
 **Insert 30 (Img03)**
+
 <img src="./03.png" width="300">
 
 - BF (30) = 0
