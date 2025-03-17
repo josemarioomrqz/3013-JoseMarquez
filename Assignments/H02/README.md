@@ -28,7 +28,7 @@
    
       2. **Double Hashing**: Uses a second hash function to determine the probing step size: h2(k). The new index is computed as (h1(k)+ i * h2(k)) % TableSize, where i is the number of attempts.
    
-   - ## Explain the pros and cons of each method**
+   - ## Explain the pros and cons of each method
   
  ### **Linear Probing**  
 
@@ -73,4 +73,5 @@
 
 
 $5, 22, 17, 18, 35, 101, 16, 0, 8$
+
 
