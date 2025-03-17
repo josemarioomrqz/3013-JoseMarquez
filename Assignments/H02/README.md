@@ -28,7 +28,7 @@
    
       2. **Double Hashing**: Uses a second hash function to determine the probing step size: h2(k). The new index is computed as (h1(k)+ i * h2(k)) % TableSize, where i is the number of attempts.
    
-   - **Explain the pros and cons of each method**
+   - ## Explain the pros and cons of each method**
   
  ### **Linear Probing**  
 
@@ -49,12 +49,13 @@
   **Cons:**
   - Requires an additional hash function.
   - Performance depends on the quality of the second hash function.
-  - **Worst-Case Big-O:** O(n), when the second hash function results in poor distribution or when the table is 
-   - **Which collision resolution technique can handle more values than table slots. Explain.**
+  - **Worst-Case Big-O:** O(n), when the second hash function results in poor distribution or when the table is
+  
+   - ## Which collision resolution technique can handle more values than table slots. Explain.
   
       - None of the open addressing methods can handle more values than available slots because open addressing stores all elements inside the table itself. If the table is full, no more insertions are possible. In contrast, chaining (linked lists at each index) can handle more values than the number of slots.
   
-   - **What is the worst performance (Big-O) for each type of collision resolution technique?**
+   - ## What is the worst performance (Big-O) for each type of collision resolution technique?
 
   | **Collision Resolution Technique** | **Worst-Case Time Complexity (Big-O)** | **Reasoning** |
   |------------------------------------|---------------------------------|------------------------------------------------|
