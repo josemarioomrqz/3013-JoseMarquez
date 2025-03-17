@@ -63,3 +63,14 @@
   | **Quadratic Probing**              | **O(n)**                        | Similar to linear probing, but avoids primary clustering. In worst cases, searching for a free slot can still take linear time. |
   | **Double Hashing**                 | **O(n)**                        | If the second hash function does not generate a good spread, probing may check a large number of slots before finding an empty one. |
   | **Chaining (Separate Linked Lists)** | **O(n)**                        | If all elements hash to the same bucket, searching through a long linked list takes O(n) time. |
+
+
+  ## Part B: Simulation and Diagram Exercises
+
+ ### Exercise 1: Open Hashing (Separate Chaining)
+
+ Given the following set of keys:
+
+
+$5, 22, 17, 18, 35, 101, 16, 0, 8$
+
