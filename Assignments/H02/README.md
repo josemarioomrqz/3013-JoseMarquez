@@ -75,3 +75,55 @@
 $5, 22, 17, 18, 35, 101, 16, 0, 8$
 
 
+### **Step 1: Compute the Hash Values**
+
+Using the division method hash function:
+
+\[
+    h(k) = k mod 10.
+\]
+
+|  Key      | Hash Value (k mod 10) | Bucket |
+|-----------|-----------------------|--------|
+| 5         |  5                    | 5      |
+| 22        | 22 mod 10 = 2         | 2      |
+| 17        | 17 mod 10 = 7         | 7      |
+| 18        | 18 mod 10 = 8         | 8      |
+| 35        | 35 mod 10 = 5         | 5      |
+| 101       | 101 mod 10 = 1        | 1      |
+|  16       | 16 mod 10 = 6         | 6      |
+|  0        | 0 mod 10 = 0          | 0      |
+|  8        | 8 mod 10 = 8          | 8      |
+
+
+### Step 2: Diagram Representation
+
+```mermaid
+graph TD;
+    A0[Bucket 0] -->|0| Key0
+    A1[Bucket 1] -->|101| Key1
+    A2[Bucket 2] -->|22| Key2
+    A5[Bucket 5] -->|5| Key5
+    A5 -->|35| Key35
+    A6[Bucket 6] -->|16| Key6
+    A7[Bucket 7] -->|17| Key7
+    A8[Bucket 8] -->|18| Key18
+    A8 -->|8| Key8
+```
+
+
+### **Step 3: Construct the Hash Table**
+
+Index | Values (Linked List)
+-----------------------------
+0     | 0
+1     | 101
+2     | 22
+3     | (empty)
+4     | (empty)
+5     | 5 → 35
+6     | 16
+7     | 17
+8     | 18 → 8
+9     | (empty)
+
