@@ -126,3 +126,14 @@ graph TD;
 | 7     | 17                        |
 | 8     | 18 → 8                   |
 | 9     | (empty)                  |
+
+
+
+### **Step 4: Identify Collisions** 
+
+ **Note: Collisions occur when multiples keys are mapped to the same index.**
+
+
+- **Bucket 5** has a collision 5 --> 35 (2 elements)
+- **Bucket 8** has a collision 18 --> 8 (2 elements)
+- **The largest linked list contains 2 elements**
