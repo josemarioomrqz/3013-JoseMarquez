@@ -30,7 +30,7 @@
    
    - **Explain the pros and cons of each method**
   
-      ### **Linear Probing**  
+ ### **Linear Probing**  
 
   **Pros:**
   - Simple to implement.
