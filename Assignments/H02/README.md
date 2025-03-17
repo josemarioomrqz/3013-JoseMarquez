@@ -114,7 +114,7 @@ graph TD;
 
 ### **Step 3: Construct the Hash Table**
 
-Index | Values (Linked List)
+| Index | Values (Linked List) |
 |-----------------------------|
 | 0     | 0   |
 | 1     | 101 |
