@@ -30,23 +30,26 @@
    
    - **Explain the pros and cons of each method**
   
-      1. **Pros of Linear Probing**:
-        - Simple to implement.
-        - Good cache performance due to sequential memory access.
-  
-      2. **Cons of Linear Probing**
-        - Prone to primary clustering (many keys clustering together) thus increasing search time.
-        - Performance degrades as the table becomes full.
-  
-      3. **Pros of Double Hashing**:
-        - Minimizes clustering issues (both primary and secondary).
-        - Ensures better distribution of keys.
-    
-      4. **Cons of Double Hashing**:
-         - Requires an additional hash function.
-         - Performance depends on the quality of the second hash function. 
-         - **Worst-Case Big-O**: O(n), when the second hash function results in poor distribution or when table is nearly full.
-  
+      ### **Linear Probing**  
+
+  **Pros:**
+  - Simple to implement.
+  - Good cache performance due to sequential memory access.
+
+  **Cons:**
+  - Prone to primary clustering (many keys clustering together), increasing search time.
+  - Performance degrades as the table becomes full.
+
+  ### **Double Hashing**  
+
+  **Pros:**
+  - Minimizes clustering issues (both primary and secondary).
+  - Ensures better distribution of keys.
+
+  **Cons:**
+  - Requires an additional hash function.
+  - Performance depends on the quality of the second hash function.
+  - **Worst-Case Big-O:** O(n), when the second hash function results in poor distribution or when the table is 
    - **Which collision resolution technique can handle more values than table slots. Explain.**
   
       - None of the open addressing methods can handle more values than available slots because open addressing stores all elements inside the table itself. If the table is full, no more insertions are possible. In contrast, chaining (linked lists at each index) can handle more values than the number of slots.
