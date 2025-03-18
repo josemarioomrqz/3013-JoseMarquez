@@ -283,7 +283,7 @@ graph TD;
 | 9     | (empty)                                |
 
  **Observations:**
-
+ 
   1. Clustering at index 0 and 5.
   2. Very poor distribution, most keys are only stored in 2 buckets. 
 
