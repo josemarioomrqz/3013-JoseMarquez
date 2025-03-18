@@ -323,4 +323,67 @@ graph TD;
    - **No collisions or clustering occur**, ensuring even distribution.
 
 
+## Part C: Reflection & Short-Answer Questions (Optional)
 
+### **1. Real-World Impact**
+#### **How does choosing a poor hash table size lead to performance degradation in real-world applications?**
+- A **poorly chosen hash table size** (e.g., a non-prime number or one too small) increases **collision frequency**, leading to:
+  - **Primary Clustering** (in linear probing) – long sequences of occupied slots slow down insertions and lookups.
+  - **Uneven Distribution** – certain indices become overloaded while others remain empty.
+  - **Longer Search Times** – as more collisions occur, resolving them takes longer, reducing efficiency.
+  - **Higher Memory Usage** – additional data structures (like linked lists in chaining) may be needed.
+
+- **Example:**  
+  In **database indexing**, an inefficient hash table can **slow down queries**, causing significant performance issues for large-scale systems like banking transactions or recommendation engines.
+
+#### **How do open and closed hashing strategies differ in their handling of collisions in high-load scenarios?**
+| **Aspect**             | **Open Hashing (Chaining)** | **Closed Hashing (Open Addressing)** |
+|------------------------|---------------------------|--------------------------------------|
+| **Handling of Collisions** | Stores multiple values in a linked list at each index. | Finds the next available slot using probing (linear, quadratic, or double hashing). |
+| **Performance in High-Load** | **More flexible**—buckets can grow dynamically. Slower if lists become too long. | **Degrades quickly** as table fills up (longer probe sequences). |
+| **Memory Usage**       | Extra memory for pointers but efficient in handling high loads. | Fixed memory usage, but performance drops significantly at high loads. |
+| **Search Complexity**  | O(1) on average, O(n) in the worst case (long chains). | O(1) on average, O(n) in the worst case (long probe sequences). |
+
+- **Example:**  
+  - Open Hashing is **better for web caching** where high-load bursts occur unpredictably.  
+  - Closed Hashing is **better for embedded systems** where memory is fixed.
+
+---
+
+### **2. Design Considerations**
+#### **If you were to design a hash table for a high-frequency trading system where every millisecond counts, which collision resolution strategy might you choose and why?**
+- **Best Choice: Open Addressing with Double Hashing**
+  - **Why?**
+    - **Fast lookups** – Avoids linked lists, which may require additional memory access.
+    - **Minimizes clustering** – Uses a secondary hash function to distribute keys better.
+    - **Efficient memory usage** – No extra memory for linked lists.
+  - **Alternative:** If the system has enough memory, a **perfect hash function** (precomputed hash map) would be even faster.
+
+- **Example:**  
+  - **Stock Market Algorithms** require nanosecond-level performance. A well-designed **open addressing scheme** (with a good secondary hash function) can ensure minimal collisions and faster execution.
+
+---
+
+### **3. Extension**
+#### **How might you combine the benefits of chaining and open addressing to design a hybrid hash table?**
+- **Hybrid Approach: Adaptive Hashing**
+  - **Primary Storage:** Uses **open addressing** (e.g., linear probing) for small load factors.
+  - **Secondary Storage:** If a slot gets too many collisions, it converts into **chaining** dynamically.
+  - **Load Balancing:** When load factor exceeds a threshold, it **switches to chaining for that bucket**.
+
+- **Benefits:**
+  - **Fast lookups in low-collision cases** (open addressing).
+  - **Handles high-load scenarios better** by switching to chaining.
+  - **Memory-efficient** – avoids overhead of linked lists unless necessary.
+
+- **Example:**  
+  - **Database caching systems** use adaptive techniques to switch between probing and chaining based on system load.
+
+---
+
+### **Final Thoughts**
+- **Choosing the right hash table strategy depends on:**  
+  - **Memory constraints**
+  - **Expected load factor**
+  - **Performance requirements**  
+- **Hybrid models** can provide the best of both worlds, offering speed in normal conditions and flexibility under high load.
