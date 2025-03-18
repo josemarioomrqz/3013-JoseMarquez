@@ -3,7 +3,7 @@
 
 ## Assignment 03 - Binary Search Tree (Delete Method)
 
-## Deletion Cases Handled: 
+## Deletion Cases Handled:
 
 The delete function properly handles **three main cases** in a Binary Search
 
