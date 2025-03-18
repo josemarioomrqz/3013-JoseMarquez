@@ -203,7 +203,7 @@ graph TD;
 ```
 
 
-### **Step 4: Final Hash Table
+### **Step 4: Final Hash Table**
 
 
 | Index | Values (Linked List)      |
