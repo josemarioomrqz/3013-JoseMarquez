@@ -6,7 +6,7 @@
 
 ## Left - Right and Right - Left Rotations
 
-**Set : 10, 20, 30, 15, 25, 5, 35, 27**
+**Set : 10, 20, 30, 15, 25, 5, 35, 27** 
 
 | **Insert 10 (Img01)** |
 |:---:|
