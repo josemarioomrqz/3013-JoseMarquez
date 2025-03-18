@@ -96,7 +96,7 @@ Using the division method hash function:
 |  8        | 8 mod 10 = 8          | 8      |
 
 
-### Step 2: Diagram Representation
+### **Step 2: Diagram Representation**
 
 ```mermaid
 graph TD;
@@ -137,3 +137,33 @@ graph TD;
 - **Bucket 5** has a collision 5 --> 35 (2 elements)
 - **Bucket 8** has a collision 18 --> 8 (2 elements)
 - **The largest linked list contains 2 elements**
+
+
+
+### Exercise 2: Closed Hashing (Open Addressing)
+
+ Given the following set of keys:
+
+
+$5, 22, 17, 18, 35, 101, 16, 0, 8$
+
+
+
+### **Step 1: Compute Initial Hash values 
+
+
+\[
+    h(k) = k mod 10.
+\]
+
+|  Key      | Hash Value (k mod 10) | Bucket (Before Collision) |
+|-----------|-----------------------|--------|
+| 5         |  5                    | 5      |
+| 22        | 22 mod 10 = 2         | 2      |
+| 17        | 17 mod 10 = 7         | 7      |
+| 18        | 18 mod 10 = 8         | 8      |
+| 35        | 35 mod 10 = 5         | 5 (Collision with 5) |
+| 101       | 101 mod 10 = 1        | 1      |
+|  16       | 16 mod 10 = 6         | 6      |
+|  0        | 0 mod 10 = 0          | 0      |
+|  8        | 8 mod 10 = 8          | 8 (Collision with 18) |
