@@ -187,7 +187,7 @@ $5, 22, 17, 18, 35, 101, 16, 0, 8$
 
 
 
-### **Step 3: Diagram Represenation**
+### **Step 3: Diagram Representation**
 
 ```mermaid
 graph TD;
@@ -218,4 +218,109 @@ graph TD;
 | 7     | 17                        |
 | 8     | 18                        |
 | 9     | 16 <-- Collision resolved |
+
+
+
+### Exercise 3: Impact of Poor Table Sizes
+
+. **Consider the set of keys:**
+     ```
+     5, 10, 15, 20, 25, 30, 35, 40
+     ```
+
+\[
+    h(k) = k mod TableSize
+\]
+
+ ### **Step 1: Compute the Hash Values**
+
+
+**For Table Size = 10**
+
+|  Key      | Hash Value (k mod 10) | Bucket |
+|-----------|-----------------------|--------|
+| 5         |  5 mod 10 = 5         | 5      |
+| 10        | 10 mod 10 = 0         | 0      |
+| 15        | 15 mod 10 = 5         | 5 (Collision) |
+| 20        | 20 mod 10 = 0         | 0 (Collision) |
+| 25        | 25 mod 10 = 5         | 5 (Collision) |
+| 30        | 30 mod 10 = 0         | 0 (Collision) |
+| 35        | 35 mod 10 = 5         | 5 (Collision) |
+| 40        | 40 mod 10 = 0         | 0 (Collision) |
+
+
+**For Table Size = 11**
+
+|  Key      | Hash Value (k mod 11) | Bucket |
+|-----------|-----------------------|--------|
+| 5         |  5 mod 11 = 5         | 5      |
+| 10        | 10 mod 11 = 10        | 10     |
+| 15        | 15 mod 11 = 4         | 4      |
+| 20        | 20 mod 11 = 9         | 9      |
+| 25        | 25 mod 11 = 3         | 3      |
+| 30        | 30 mod 11 = 8         | 8      |
+| 35        | 35 mod 11 = 2         | 2      |
+| 40        | 40 mod 11 = 7         | 7      |
+
+
+
+### **Step 2: Construct the Hash Tables**
+
+
+ **For Table Size = 10**
+
+| Index | Values (Chained List if necessary)      |
+|-------|-----------------------------------------|
+| 0     | 10 → 20 → 30 → 40  (Collisions)        |
+| 1     | (empty)                                |
+| 2     | (empty)                                |
+| 3     | (empty)                                |
+| 4     | (empty)                                |
+| 5     | 5 → 15 → 25 → 35  (Collisions)         |
+| 6     | (empty)                                |
+| 7     | (empty)                                |
+| 8     | (empty)                                |
+| 9     | (empty)                                |
+
+ **Observations:**
+
+  1. Clustering at index 0 and 5.
+  2. Very poor distribution, most keys are only stored in 2 buckets. 
+
+
+ **For Table Size = 11**
+
+| Index | Values  |
+|-------|---------|
+| 0     | (empty) |
+| 1     | (empty) |
+| 2     | 35      |
+| 3     | 25      |
+| 4     | 15      |
+| 5     | 5       |
+| 6     | (empty) |
+| 7     | 40      |
+| 8     | 30      |
+| 9     | 20      |
+| 10    | 10      |
+
+**Observations:**
+
+  1. Evenly distributed keys across multiple indices.
+  2. No clustering or collisions.
+
+
+### **Step 3: Discussion**
+
+1. **Why is the table size of 10 a poor choice?**
+   - Since **10 is not prime**, many keys end up in the same bucket due to common factors.
+   - **Clustering occurs** at index **0** and **5**.
+   - **Too many collisions**, which degrade search performance.
+
+2. **Why is the table size of 11 a better choice?**
+   - **11 is a prime number**, reducing patterns in key distribution.
+   - **Each key maps to a unique bucket**, preventing clustering.
+   - **No collisions or clustering occur**, ensuring even distribution.
+
+
 
