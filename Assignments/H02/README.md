@@ -149,7 +149,7 @@ $5, 22, 17, 18, 35, 101, 16, 0, 8$
 
 
 
-### **Step 1: Compute Initial Hash values 
+### **Step 1: Compute Initial Hash values** 
 
 
 \[
