@@ -167,3 +167,55 @@ $5, 22, 17, 18, 35, 101, 16, 0, 8$
 |  16       | 16 mod 10 = 6         | 6      |
 |  0        | 0 mod 10 = 0          | 0      |
 |  8        | 8 mod 10 = 8          | 8 (Collision with 18) |
+
+
+
+### **Step 2: Resolve Collisions using Linear Probing**
+
+
+|  Key      | Hash Value (k mod 10) | Collision? | Final Bucket (after Linear Probing) |
+|-----------|-----------------------|--------|-------------------------------------|
+| 5         |  5                    | No     |                5                    |
+| 22        | 22 mod 10 = 2         | No     |                2                    |
+| 17        | 17 mod 10 = 7         | No     |                7                    |
+| 18        | 18 mod 10 = 8         | No     |                8                    |
+| 35        | 35 mod 10 = 5         | Yes    | 5 is occupied  6 is next available  |
+| 101       | 101 mod 10 = 1        | No     |                1                    |
+|  16       | 16 mod 10 = 6         | Yes    | 6 is occupied  9 is next available  |
+|  0        | 0 mod 10 = 0          | No     |                0                    |
+|  8        | 8 mod 10 = 8          | Yes    | 8 is occupied  3 is next available  |
+
+
+
+### **Step 3: Diagram Represenation**
+
+```mermaid
+graph TD;
+    A0[0] -->|0| Index0
+    A1[1] -->|101| Index1
+    A2[2] -->|22| Index2
+    A3[3] -->|8| Index3
+    A5[5] -->|5| Index5
+    A6[6] -->|35| Index6
+    A7[7] -->|17| Index7
+    A8[8] -->|18| Index8
+    A9[9] -->|16| Index9
+```
+
+
+### **Step 4: Final Hash Table
+
+
+| Index | Values (Linked List)      |
+|-------|---------------------------|
+| 0     | 0                         |
+| 1     | 101                       |
+| 2     | 22                        |
+| 3     | 8  <-- Collision resolved |
+| 4     | (empty)                   |
+| 5     | 5                         |
+| 6     | 35 <-- Collision resolved |
+| 7     | 17                        |
+| 8     | 18                        |
+| 9     | 16 <-- Collision resolved |
+
