@@ -8,17 +8,17 @@
 
 - **Topic**: A* Search Algorithm
   
-- **Description**: A* is a popular informed search algorithem widely used in pathfinding and graph traversal know for finding the shorest efficiently.
+- **Description**: A* is a popular informed search algorithm widely used in pathfinding and graph traversal, known for finding the shortest path efficiently.
   
-- **Why is it intresting?**: It combines features of uniform-cost search and greedy best first search, providing optimallity and efficiency. It is widely implemented in real world scenarios like GPS navigation, game AI, and robotics. 
+- **Why is it interesting?**: It combines features of uniform-cost search and greedy best-first search, providing optimality and efficiency. It is widely implemented in real-world scenarios like GPS navigation, game AI, and robotics. 
 
 
 2. ## Core Mechanics
    
 - **High-Level Overview:**
     
-    - Uses heuristics to guide the search towards the most promesing path.
-    - Evalutaes nodes based on **f(n) = g(n) + h(n):**
+    - Uses heuristics to guide the search towards the most promising path.
+    - Evaluates nodes based on **f(n) = g(n) + h(n):**
 
         - **g(n):** Cost from start node to current node.
         - **h(n):** Estimated cost from current node to goal.
@@ -26,12 +26,12 @@
 
 - **Edge Cases & Design Tradeoffs:**
     
-    - Works optimally if heuristics is admissible (never overestimates the true cost).
-    - Performance can degrade significantly if heuristics is poorly chosen. 
+    - Works optimally if heuristics are admissible (never overestimate the true cost).
+    - Performance can degrade significantly if heuristics are poorly chosen. 
     - Tradeoff between heuristic complexity and computational overhead.
 
 
-3. ## Uses Cases/Imapct 
+3. ## Use Cases & Impact 
    
 - **Real-World Applications:**
   
@@ -39,20 +39,19 @@
     - Game development for NPC pathfinding.
     - Autonomous vehicle navigation systems. 
 
-- **Theorical Significance:**
+- **Theoretical Significance:**
   
-    - Benchmark for development and testing heuristic - based search algorithems.
-    - Bases for numerous advanced search strategies. 
+    - Benchmark for development and testing heuristic-based search algorithms.
+    - Basis for numerous advanced search strategies. 
 
 - **Comparison to Alternatives:**
   
     - Better performance compared to uninformed search (BFS, DFS).
-    - More optimal than greedy algorithems due to comprehensive evaluation.
+    - More optimal than greedy algorithms due to comprehensive evaluation.
 
 
 4. ## Conclusion
    
     - **Key Points:**
-        - A* efficiantly combines path cost nd heuristic to find optimal paths.
+        - A* efficiently combines path cost and heuristic to find optimal paths.
         - Proper heuristic selection is crucial for performance. 
-
