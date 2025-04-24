@@ -1,6 +1,6 @@
 ## Jose Marquez
 
-#### Repo: 3013 Discrete Structures
+#### Repo: 3013 Advanced Structures
 
 #### Email: mmarquez1705@hotmail.com
 
