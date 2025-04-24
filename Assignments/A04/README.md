@@ -6,6 +6,6 @@
 
 ### Leveraging Retrieval-Augmented Generation to Improve Access to University Information
 
-<img src="./A04.jpg" width="400">
+![A04 image](./A04.jpg)
 
 Gabriel Gacovicaj's presentation on a chatbot that could help improve access to university info.
