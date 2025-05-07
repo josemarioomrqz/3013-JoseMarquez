@@ -55,3 +55,6 @@
     - **Key Points:**
         - A* efficiently combines path cost and heuristic to find optimal paths.
         - Proper heuristic selection is crucial for performance. 
+
+
+https://www.canva.com/design/DAGmxm-TY3o/jD9pqHv7OWVnO-Y4DNsEmA/edit?utm_content=DAGmxm-TY3o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
