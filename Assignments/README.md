@@ -2,8 +2,8 @@
 
 |  #  | Folder Link                            | Assignment Description                               |
 | :-: | -------------------------------------- | ---------------------------------------------------- |
-|  0  | [A03](./A03/README.md)                 | [BST Delete Method explained](./A03/README.md) |
-|  1  | [A04](./A04/README.md)                 | [Celebration of Scholarship Presentation](./A04/README.md) |
-|  2  | [H01](./H01/README.md)                 | [AVL tree Insertions (Left Rotation)](./H01/README.md) |
-|  3  | [H02](./H02/README.md)                 | [Hashing - Strategies and Collision Resolution](./H02/README.md) |
-|  4  | [P01](./P01/README.md)                 | [Presentation on A* Algorithm](./P01/README.md) |
+|  1  | [A03](./A03/README.md)                 | [BST Delete Method explained](./A03/README.md) |
+|  2  | [A04](./A04/README.md)                 | [Celebration of Scholarship Presentation](./A04/README.md) |
+|  3  | [H01](./H01/README.md)                 | [AVL tree Insertions (Left Rotation)](./H01/README.md) |
+|  4  | [H02](./H02/README.md)                 | [Hashing - Strategies and Collision Resolution](./H02/README.md) |
+|  5  | [P01](./P01/README.md)                 | [Presentation on A* Algorithm](./P01/README.md) |
